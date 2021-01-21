@@ -1,0 +1,13 @@
+<h1><%= @blogger.name %><h1>
+
+<label>Age:</label>
+<%= @blogger.age %><div>
+<label>Bio:</label>
+<%= @blogger.bio %>
+
+<div><p>Most Liked Post: <%= link_to @blogger.most_liked_post.title, post_path(@blogger.most_liked_post) %><div></p>
+
+<div><p>Total Likes: <%= @blogger.total_likes %><div></p>
+
+<div><p>Most Written Location:<%= @blogger.most_written_location.name %><div><p>
+

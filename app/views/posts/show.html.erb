@@ -1,0 +1,17 @@
+<h1><%= @post.title %><h1>
+
+<label>Content:</label>
+<%= @post.content %><div>
+
+<div><label>Likes:</label>
+<%= @post.likes %><div>
+<%= button_to "Like", like_path %>
+
+<label>Blogger:</label>
+<%= link_to @post.blogger_name, blogger_path(@post.blogger) %>
+
+<label>Destination:</label>
+<%= link_to @post.destination_name, destination_path(@post.destination) %>
+
+
+

@@ -1,0 +1,22 @@
+<h1>New Blogger<h1>
+
+
+<% if @blogger.errors.any? %>
+  <h2><%= @blogger.errors.count %> errors<h2>
+    <% @blogger.errors.full_messages.each do |message|%>
+      <li><%= message %></i>
+    <% end %>
+<% end %>
+
+<%= form_for(@blogger) do |f| %>
+  <br><label>Name</label><br>
+  <%= f.text_field :name %><br>
+
+  <label>Age</label><br>
+  <%= f.number_field :age %><br>
+
+  <label>Bio</label><br>
+  <%= f.text_area :bio %><br>
+  
+<%= f.submit %>
+<% end %>
