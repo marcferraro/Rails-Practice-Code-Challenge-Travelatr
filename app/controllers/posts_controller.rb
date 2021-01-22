@@ -45,7 +45,7 @@ class PostsController < ApplicationController
         @post.likes = @post.likes + 1
         @post.save
 
-        redirect_to post_path(@post)
+        render :show
     end
 
     private
